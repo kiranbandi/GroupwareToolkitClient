@@ -1,52 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <button id="connectbtn">Connect</button>
 
-  <div id="disconnected">
-    <label for="ip">GT Server IP:</label>
-    <input type="text" name="ip" id="ip">
-  </div>
+<body class='with-top-navbar'>
+    <style>
+        #root {
+            border: 2px solid black;
+            margin: 0px auto;
+            height: 500px;
+            width: 500px;
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+    <!--container where content is to be loaded-->
+    <div id="root">
+    </div>
 
-  <div id="connected">
-    <label for="id">Your ID:</label>
-    <input type="text" name="id" id="id">
-    <button id="authbtn">Authenticate</button>
-  </div>
-
-  <div id="authed">
-    <label for="room">Room to join:</label>
-    <input type="text" name="room" id="room">
-    <label for="user">Starting user state</label>
-    <textarea name="user" id="user" cols="30" rows="10">{}</textarea>
-    <button id="joinbtn">Join room</button>
-  </div>
-
-  <div id="joined">
-    <button id="leaveroombtn">Leave room</button>
-    <p id="info"></p>
-
-    <label for="users">Current users</label>
-    <textarea name="users" id="users" cols="30" rows="10" readonly></textarea>
-
-    <label for="state">Current state</label>
-    <textarea name="state" id="state" cols="30" rows="10" readonly></textarea>
-
-    <textarea name="updateuser" id="updateuser" cols="30" rows="10">{"test": "json obj"}</textarea>
-    <button id="updateuserbtn">Send user update reliable</button>
-    <button id="updateuserbtnunr">Send user update unreliable</button>
-
-    <textarea name="updatestate" id="updatestate" cols="30" rows="10">{"test": "json obj"}</textarea>
-    <button id="updatestatebtn">Send state update reliable</button>
-    <button id="updatestatebtnunr">Send state update unreliable</button>
-  </div>
-
-  <script src="../dist/gt.umd.js"></script>
-  <script src="index.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="gt.umd.dev.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
